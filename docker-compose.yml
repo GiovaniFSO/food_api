@@ -1,0 +1,25 @@
+version: '3.9'
+services:
+  web:
+    build: .
+    volumes:
+      - .:/opt/app
+    ports:
+      - 3001:3001
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      DB_HOST: db
+    depends_on:
+      - db
+  db:
+    image: postgres:14-alpine
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+    ports:
+      - "5433:5432"
+    volumes:
+      - find_my_beer_data:/var/lib/postgresql/data
+volumes:
+  find_my_beer_data:
