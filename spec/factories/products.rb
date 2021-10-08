@@ -1,8 +1,8 @@
 FactoryBot.define do
   factory :product do
-    name { "MyString" }
-    description { "MyText" }
-    price { 1.5 }
-    product_category { nil }
+    name { "Margherita Pizza" }
+    description { "Traditional Pizza with Extra Famous Sauce and Fresh Basil." }
+    price { 16.0 }
+    product_category
   end
 end
