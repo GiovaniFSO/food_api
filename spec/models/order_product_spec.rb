@@ -1,5 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe OrderProduct, type: :model do
-  pending "add some examples to (or delete) #{__FILE__}"
+  it { should belong_to(:order) }
+  it { should belong_to(:product) }
+  it { should validate_presence_of(:quantity).with_message("can't be blank") }
 end
