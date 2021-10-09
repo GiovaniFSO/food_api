@@ -1,7 +1,7 @@
 FactoryBot.define do
   factory :order do
-    name { "RandomOrder" }
-    phone_number { "1(111)111-1111" }
+    name { 'RandomOrder' }
+    phone_number { '1(111)111-1111' }
     total_value { 25.0 }
     city { 'New York' }
     street { '5th Ave' }

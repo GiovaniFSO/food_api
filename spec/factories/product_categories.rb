@@ -1,6 +1,6 @@
 FactoryBot.define do
   factory :product_category do
-    title { "Pizza" }
+    title { 'Pizza' }
     restaurant
   end
 end

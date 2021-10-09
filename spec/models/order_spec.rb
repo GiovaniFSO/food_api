@@ -10,5 +10,5 @@ RSpec.describe Order, type: :model do
   it { should validate_presence_of(:neighborhood).with_message("can't be blank") }
   it { should validate_presence_of(:street).with_message("can't be blank") }
   it { should validate_presence_of(:number).with_message("can't be blank") }
-  it { should define_enum_for(:status).with(%i[waiting delivered])}
+  it { should define_enum_for(:status).with(%i[waiting delivered]) }
 end
